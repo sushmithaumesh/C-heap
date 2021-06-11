@@ -1,0 +1,257 @@
+Algorithm- Heap of Students
+Sushmitha Shettar
+Three different classes Date,Address and Student
+Const – is a keyword that when used cant modify and only read the function.
+Date.h/Date.cpp
+•	Private
+
+
+Variable _day of data type int.
+Variable _month of data type int.
+Variable _year of data type int.
+
+
+•	Public 
+
+
+Date()
+Default constructor 
+Input- no input.
+Goal- default constructor of the class.
+           Set default values for member variables date, month and year as 0.
+Output- no output.
+
+Date(const int& day, const int& month, const int& year)
+Input- no input
+Goal- overloaded constructor 
+Output- no output
+
+Getters
+
+Int get_day()const
+
+Input- no input
+Goal- getter returns  day.
+Output- gets day at that instance.
+
+Int get_month()const
+Input- no input 
+Goal- getter returns month.
+Output- gets month at that instance.
+
+Int get_year()const
+Input- no input
+Goal- getter returns year.
+Output- gets year at the instance.
+
+Int set_day(const int& day)
+Input- no input
+Goal- equates member variable _day to parameter of the setter day.
+Output- sets day at that instance to the member variable _day.
+
+Int set_month(const int& month)
+Input- no input 
+Goal- equates member variable _month to parameter of the setter day.
+Output- sets day at that instance to member variable _month.
+
+Int set_year(const int& year)
+Input- no input
+Goal- equates member variable _year to parameter of the setter day.
+Output – set day at that instance to member variable _year.
+
+
+Address.h/Address.cpp
+
+•	Private 
+String _Address1
+String _Address2
+String _city
+String _state
+String _zipcode
+
+•	Public 
+
+Address()
+Input- no input 
+Goal- default constructor 
+Output- no input
+Default value of strings is set to an empty string “ “ for all the string variables. 
+
+Address(string& Address1, string& Address2, string& city, string& state, string& zipcode)
+Input- no input
+Goal- overloaded constructor 
+Output- no output
+
+String getAddress1()const
+Input- no input 
+Goal-  getter returns string _Address1
+Output- no output just returns the _Address1 string at that instance.
+
+String getAddress2()const
+Input- no input
+Goal- getter returns string _Address2
+Output- no output just returns the _Address2 string at that instance.
+
+String getcity()const
+Input- no input
+Goal- getter returns string _city
+Output- no output just returns the _city string at that instance.
+
+String getstate()const
+Input- no input
+Goal- getter returns string _state
+Output- no output just returns the _state string at that instance.
+
+String getzipcode()const
+Input- no input 
+Goal- getter returns string _zipcode
+Output- no output just returns the _zipcode string at that instance.
+
+Student.h/student.cpp
+
+•	Private 
+String _Firstname
+String _Lastname
+Address* _address – pointer to object Address. It links the variable to address class.
+Date*_DOB- pointer to object Date. It makes the variable point to the date class and links it.
+Date*_graddate .
+Double _GPA.
+Unsigned int _credithours
+Output stream for full report is inFilefull ,opens the file.
+Output stream for short report is inFilesh, opens the file.
+Output stream for alphareport is inFilealpha, opens the file.
+•	Public 
+
+Student()
+Input- no input 
+Goal- default constructor 
+Output- no output 
+
+String getFirstname()const
+Input- no input 
+Goal – returns the Firstname string in that instance.
+Output- no output but returns Firstname at that instance to where ever the function is called. Return type is string.
+
+String getLastname()const
+Input- no input 
+Goal- getter returns the Lastname string of that instance.
+Output- returns Lastname string to wherever its called return type is string.
+
+String getAddress()const
+Input- no input 
+Goal- returns the address string.
+•	Declare a string called address_str and equate the string to variable _address which points to the getaddress function in the address class, using (->).
+•	To the same for other getters in the address class such as getcity etc. used the “\t” to give a horizontal tab between the strings.
+•	Returns the address_str.
+Output- return type is string and returns address variable of that instance.
+
+Double getGPA()const
+Input- no input 
+Goal – returns the variable GPA at that instance
+Output- returns a double and GPA at that instance.
+
+String getDOB()const
+Input- no input 
+Goal – returns the DOB string that points to the date class.
+•	Declare a string variable dob_str and a stringstream for it called strDOB.
+•	In an if statement put the condition of variable _DOB that points to date class.
+•	Equate variable month to DOB which points at the result of the getter of month.
+•	Then we pass the month into the stringstream 
+Ouput- returns DOB string at that instance.
+
+String getGradDate()const
+ Input- no input 
+Goal- returns the gradate string that links and points to the date class
+Output- returns gradate string of that instance.
+
+Unsigned int getcredithours()const
+Input – no input 
+Goal – returns the credithours at that instance.
+Output – return type is unsigned int of credithours.
+
+Void setFirstname(const string& Firstname)
+Input – no input 
+Goal- sets the variable firstname at the instance to the function parameter firstname.
+Output- return type is void. And sets value of firstname variable.
+
+Void setLastname(const string& Lastname)
+Input- no input 
+Goal- sets value of the variable lastname with that of the function parameter which points at value at that instance.
+Output- return type is void. 
+
+Void setDOB(const string& DOB)
+Input- no input.
+Goal-  to set value of DOB which is string having value of day, month and year.
+•	Declare a stringstream ssFieldData with content as variable DOB.
+•	Declare an array consisting of three element.
+•	Declare a string and declare a character called delimiter which is the ‘/’
+•	Declare a variable i which is a int and give it a value zero.
+•	i acts like a counter and keeps track of number of elements in the array.
+•	The array fielddata with i number of elements in it is equal to the conversion of string to integer
+•	 Make an if condition that has a condition as variable _DOB.
+In the loop the elements in the array are set to day, month and year using setters of date class at that instance.
+Output- return type is void 
+Void setAddress(const string& student_address)
+Input- no input 
+Goal- to set address of each students with its various parts such as address1,zipcode,city etc
+•	Similar to setDOB make an array of 11 elements and make a counter to keep track of number elements in the array after each loop. 
+•	Make an if condition with the condition being _address and it stores the current address at that instance got from the getters into the array.
+Output- return type is void.
+Void setGradDate(const string& gradate)
+Input- no input
+Goal- to set gradate with month , day and year in a string at that instance.
+•	Similar to setDOB we set array of 3 elements and a string and a counter to keep track of number of element in the array after each loop.
+•	Inside the while loop with condition of getline as it get a line from the text file it is converted to string and stored in the array.
+•	Make an if statement with condition of _graddate and  use setters from date class to set value in the array elements for month,day and time.
+Output- return type is void.
+Void setGPA(const double& GPA)
+Input- no input 
+Goal- to set value for variable _GPA by equating it to function parameter GPA.
+Ouput- return type is void.
+Void setcredithours(const int& credithours)
+Input – no input 
+Goal- to set value for variable _credithours by equating it to credithours function parameter.
+Output- return type is void
+Void fullreport()
+Input- no input
+Goal- open a file named fullreport.txt and print out information of each student into the report.
+•	uses getters from all classes to get the value of each component at that instance and prints it out into the inFilefull which is the fullreport.txt.
+•	and at last print a newline.
+        Output- return type is void
+Void shortreport()
+Input- no input
+Goal- prints out last and first name of every student into a new text file named shortreport.txt.
+•	uses getters similar to previous function to get value of names which is string and print it out into the text file.
+•	And at last print a newline
+Output- return type is void
+Void alphareport()
+Input- no input 
+Goal- prints out student information in a alphabetically order into a new text file named alphareport.txt
+Output- return type is void.
+
+~Student()
+Input- no input 
+Goal- deconstructor deletes things on the heap 
+•	Delete _address,_DOB,_graddate.
+•	Close all the files such as fullreport,short and alpha report.
+Output- no output.
+
+
+Mainheap.cpp
+Includes all the classes header files.
+Input- no input 
+•	Open student.txt file and declare two strings line and strFieldData.
+•	Make Boolean first_line=true.
+•	Use output stream to open files fullreport,shortreport and alpha report for writing and open file before it is discarded.
+•	Also close the text files.
+•	Make a counter variable to keep track of elements in the array 
+•	Make a array of 50 students and put it into the heap.
+•	Make a while loop with condition of getline from the inFile and inside the loop make a if statement with the Boolean variable not equal to as condition.
+•	In the if loop there is a for loop that increments the array elements till 11th element and get line from the string stream using delimiter as ‘,’.
+•	Declare three string variables with names FieldData, Address, Dob.
+•	The student array element is set to first and lastname with help of setters and using string strFieldData.
+•	Equate string variable address to string strFieldData first element.
+•	Then again store addresses using setters into the student array.
+•	Equate GPA string strFieldData[] which is converted from a string to a double.
+•	Same for credithours convert strFieldData[] to integer from string and then equate it.
+•	Outside the  if loop make boolen first_line  false and outside while loop delete student array from heap.
